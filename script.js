@@ -7,16 +7,16 @@ let promedio=0
 let contadorNotas=0
 let acumulador=0
 do {
-    notaIngresada=parseInt(prompt("Ingrese Nota"))
+    notaIngresada=parseInt(prompt("Ingrese Nota. (Ingrese 0 para salir)"))
     contadorNotas++
     acumulador=acumulador+notaIngresada
 } while (parseInt(notaIngresada));
 contadorNotas=contadorNotas-1
 promedio=acumulador/contadorNotas
-if (promedio>=6) {
-    alert(nombre+" "+"Has aprobado la materia con: "+promedio)
+if (promedio>=7) {
+    alert(nombre+". "+"Has aprobado la materia con: "+promedio)
 }else {
-    alert(nombre+" "+"Has desaprobado la materia con: "+promedio)
+    alert(nombre+". "+"Has desaprobado la materia con: "+promedio)
 }
 
 /*Leer números enteros positivos de teclado, hasta que el usuario ingrese el 0 o una letra. Informar cuál fue el mayor número ingresado.*/
@@ -24,7 +24,7 @@ let numeros=0
 let k=0
 let mayor=0
 do {
-    numeros=parseInt(prompt("Ingrese para saber cual es el Numero Mayor"))
+    numeros=parseInt(prompt("Ingrese Numeros para saber cual es el Mayor.(Ingrese 0 para salir)"))
     k++
     if (k==1) {
         mayor=numeros
@@ -32,17 +32,4 @@ do {
         mayor=numeros
     }
 } while (parseInt(numeros));
-alert("El Mayor es: "+mayor)
-/*Leer números enteros de teclado, hasta que el usuario ingrese el 0 o una letra. 
-Finalmente,mostrar la sumatoria de todos los números ingresados (contando el 0).*/
-
-let num=1
-let suma=0
-let i=0
-do {
-    num=parseInt(prompt("Ingrese un numero"))
-    i++
-    if (num>0){
-        suma=suma+num}
-} while (parseInt(num));
-alert(suma)
+alert("El Numero Mayor es: "+mayor)
